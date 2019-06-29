@@ -1,0 +1,198 @@
+.bottom {
+    width: 100%;
+    text-align: center;
+
+    .sublogo {
+        width: 95%;
+        max-width: 1120px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        background-color: $dblue;
+        border-top-left-radius: rem(48);
+        border-top-right-radius: rem(48);
+        text-align: center;
+
+        img {
+            width: rem(245);
+            position: absolute;
+            z-index: 2;
+            left: rem(18);
+            top: rem(-60);
+        }
+
+        h1 {
+            color: #fff;
+            line-height: 1;
+            font-size: rem(48);
+            padding: rem(90) 0 rem(170);
+        }
+    }
+
+    .info {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        position: relative;
+        z-index: 2;
+        transform: translateY(rem(-65));
+    }
+
+    .info__cell {
+        display: table-cell;
+        vertical-align: top;
+        font-size: 0;
+    }
+
+    .cell1 {
+        text-align: left;
+    }
+
+    .cell2 {
+        text-align: center;
+    }
+
+    .cell3 {
+        text-align: right;
+    }
+
+    .ic-inner {
+        display: inline-block;
+        font-size: rem(16);
+        text-align: center;
+        width: 94%;
+        background-color: #fff;
+        border-radius: rem(20);
+        box-shadow: 10.5px 18.187px 21px 0px rgba(0, 0, 0, 0.4);
+        padding: rem(95) rem(36) rem(36);
+        position: relative;
+        z-index: 1;
+
+        h3 {
+            position: absolute;
+            z-index: 1;
+            top: rem(30);
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: $dpurple;
+            font-size: rem(24);
+            font-weight: 700;
+        }
+
+        .reg {
+            padding-bottom: rem(15);
+            color: $dblue;
+            font-size: rem(16);
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .come {
+            vertical-align: middle;
+            text-align: left;
+            color: $dblue;
+            font-size: rem(18);
+            font-weight: 700;
+
+            img {
+                vertical-align: middle;
+                width: rem(37);
+                margin: 0 rem(20) 0 rem(5);
+            }
+        }
+    }
+
+    .stop {
+        color: $dblue;
+        line-height: 1;
+        font-size: rem(36);
+        font-weight: 700;
+        padding: rem(50) 0 rem(58);
+    }
+
+
+
+}//bottom
+
+.divider {
+    display: none;
+    width: 100%;
+    height: 3px;
+    background-color: $dblue;
+}
+
+@media screen and (max-width: 1280px) {
+    .bottom .ic-inner {
+        .come {
+            vertical-align: middle;
+            text-align: left;
+            color: $dblue;
+            font-size: rem(16);
+            font-weight: 700;
+
+            img {
+                vertical-align: middle;
+                width: rem(30);
+                margin: 0 rem(5) 0 rem(5);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1105px) {
+    .bottom {
+        .info__cell {
+            display: block;
+        }
+
+        .ic-inner {
+            margin-bottom: rem(30);
+        }
+
+        .cell1 {
+            text-align: center;
+        }
+
+        .cell3 {
+            text-align: center;
+        }
+
+        .sublogo {
+
+            img {
+                width: rem(200);
+                left: rem(18);
+                top: rem(-60);
+            }
+
+            h1 {
+                font-size: rem(36);
+                padding: rem(90) 0 rem(170);
+            }
+        }
+
+        .stop {
+            font-size: rem(30);
+            padding: rem(50) 0 rem(58);
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .bottom {
+        .sublogo {
+            img {
+                width: rem(200);
+                left: rem(18);
+                top: rem(-60);
+            }
+
+            h1 {
+                font-size: rem(34);
+                padding: rem(160) 0 rem(170);
+            }
+        }
+    }
+}

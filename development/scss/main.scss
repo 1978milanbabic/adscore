@@ -1,0 +1,116 @@
+//********************** FONTS ******************************
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+//**************** VARIABLES *******************
+
+@import 'variables/basic-variables';
+@import 'variables/colors';
+@import 'variables/animations';
+
+//********************** BASICS (ANULL BASIC DEFAULTS OF BROWSERS) *****************************
+
+body, html {
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: setdefault-rem-px();
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+//no select, touch callout, drag, drop,... except text (enabled 'copy' only on 'text' elements)
+a, img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    user-drag: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+//**************** container ***********************
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+//**************** btns ***********************
+
+.pbtn {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    color: #fff;
+    font-size: rem(36);
+    font-weight: 700;
+    padding: rem(12) rem(30);
+    border: 1px solid $purple;
+    background-color: $purple;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    outline: none;
+    cursor: pointer;
+}
+
+.pbtn:hover {
+    background-color: #fff;
+    color: $purple;
+}
+
+.anim {
+    opacity: 0;
+}
+
+//********************** PARTIALS *********************
+
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/bottom';
+@import 'partials/footer';
+
+//********************** MEDIA *********************
+
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 1105px) {
+    .pbtn {
+        font-size: rem(30);
+        padding: rem(7) rem(25);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body, html {
+        //  calc(MINFSpx + (MAXFS-MINFS)*(100vw-MINSZpx)/(MAXSZ-MINSZ))
+        //*MINFS - min font-size
+        //*MAXFS - max font-size
+        //*MINSZ - min screen size
+        //*MAXSZ - max screen size
+        font-size: calc(16*(100vw)/500);
+    }
+}

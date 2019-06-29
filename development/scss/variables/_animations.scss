@@ -1,0 +1,50 @@
+@keyframes tada {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.tada {
+    animation: tada 0.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes btnintro {
+    from {
+      transform: scale3d(1, 1, 1);
+      opacity: 0;
+    }
+
+    10%, 20% {
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      opacity: 1
+    }
+
+    30%, 50%, 70%, 90% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+}
+
+.btnintro {
+    animation-name: btnintro;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}

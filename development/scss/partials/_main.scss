@@ -1,0 +1,276 @@
+main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    // content
+    .content {
+        width: 100%;
+        display: table;
+        padding: rem(50) 0 rem(40);
+
+        .left {
+            display: table-cell;
+            vertical-align: middle;
+            width: 50%;
+            padding: 0 rem(45) 0 rem(55);
+
+            p {
+                color: $gray;
+                font-weight: 400;
+                font-size: rem(18);
+                line-height: 1.6666;
+                padding: rem(15) 0;
+                text-align: justify;
+            }
+
+            p.lastp {
+                font-weight: 700;
+            }
+        }
+
+        .right {
+            display: table-cell;
+            vertical-align: middle;
+            width: 50%;
+            padding: 0 rem(55) 0 rem(45);
+
+            img {
+                width: 100%;
+            }
+        }
+    }//content
+
+    // form
+    form#mainform {
+        display: none;
+        font-size: rem(16);
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+        background-color: #fff;
+        padding: rem(30) rem(56) rem(135);
+        box-shadow: 10.5px 18.187px 21px 0px rgba(0, 0, 0, 0.35);
+        color: $gray;
+
+        .section {
+            width: 100%;
+
+            h5 {
+                font-weight: 700;
+                font-size: rem(18);
+                width: 100%;
+                text-align: left;
+                line-height: 1;
+                padding: rem(27) 0;
+                border-bottom: 2px solid $purple;
+                margin-bottom: rem(15);
+            }
+
+            input, select {
+                width: 100%;
+                font-size: rem(18);
+                padding: rem(10) rem(20);
+                text-align: left;
+            }
+        }
+
+        .inputs-table {
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+        }
+
+        .inputs-cell-left {
+            display: table-cell;
+            vertical-align: middle;
+            padding-right: rem(25);
+        }
+
+        .inputs-cell-right {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: rem(25);
+        }
+
+        .read {
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+            padding: rem(115) 0 rem(40);
+            color: $dblue;
+            font-size: rem(24);
+
+            input {
+                vertical-align: middle;
+                width: rem(30);
+                height: rem(30);
+            }
+
+            a {
+                vertical-align: middle;
+                display: inline-block;
+                color: $purple;
+                margin-top: rem(-3);
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        // add *
+        .input-holder, .inputs-cell-left, .inputs-cell-right {
+            padding-top: rem(15);
+            padding-bottom: rem(15);
+            position: relative;
+            z-index: 1;
+        }
+
+        .input-holder span, .inputs-cell-right span {
+            position: absolute;
+            z-index: 2;
+            font-size: rem(18);
+            top: rem(25);
+            right: rem(20);
+            color: $purple;
+        }
+
+        .inputs-cell-left span {
+            position: absolute;
+            z-index: 2;
+            font-size: rem(18);
+            top: rem(25);
+            right: rem(45);
+            color: $purple;
+        }
+
+        // add "optional"
+        .input-holder span.opt {
+            position: absolute;
+            z-index: 2;
+            font-size: rem(18);
+            top: rem(25);
+            right: rem(20);
+            color: #666;
+        }
+
+    }//form
+
+    form#mainform.lastpage {
+        transform: translateY(-$movement);
+    }
+
+}//main
+
+@media screen and (max-width: 1105px) {
+    main form#mainform {
+        .inputs-cell-left {
+            padding-right: rem(15);
+        }
+
+        .inputs-cell-right {
+            padding-left: rem(15);
+        }
+
+        .read {
+            font-size: rem(18);
+
+            input {
+                width: rem(20);
+                height: rem(20);
+            }
+        }
+    }
+
+    main .content {
+        width: 100%;
+        display: block;
+        padding: rem(50) 0 rem(40);
+
+        .left {
+            display: block;
+            width: 95%;
+            margin: 0 auto;
+            padding: 0 rem(45) 0 rem(55);
+
+            p {
+                font-size: rem(18);
+                padding: rem(15) 0;
+            }
+        }
+
+        .right {
+            display: block;
+            width: 95%;
+            margin: 0 auto;
+            padding: 0 rem(55) 0 rem(45);
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: 440px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    main .content {
+        padding: rem(50) 0 rem(80);
+    }
+
+    main form#mainform {
+        .inputs-table {
+            display: block;
+        }
+
+        .inputs-cell-left {
+            display: block;
+            padding-right: 0;
+        }
+
+        .inputs-cell-right {
+            display: block;
+            padding-left: 0;
+        }
+
+        .input-holder span, .inputs-cell-left span, .inputs-cell-right span {
+            position: absolute;
+            z-index: 2;
+            font-size: rem(18);
+            top: rem(25);
+            right: rem(15);
+            color: $purple;
+        }
+
+        .input-holder span.opt {
+            position: absolute;
+            z-index: 2;
+            font-size: rem(18);
+            top: rem(25);
+            right: rem(15);
+            color: #666;
+        }
+
+        .read {
+            font-size: rem(18);
+            line-height: 2;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main form#mainform {
+        padding: rem(20) rem(20) rem(80);
+
+        .read {
+            padding: rem(40) 0 rem(40);
+        }
+    }
+}

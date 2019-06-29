@@ -1,0 +1,39 @@
+footer {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: rem(200);
+
+    .pplinks {
+        color: $dblue;
+        font-size: rem(12);
+        padding-bottom: rem(12);
+        line-height: 1;
+    }
+
+    .pplinks a:hover {
+        text-decoration: underline;
+    }
+
+    .copy {
+        color: $dblue;
+        font-size: rem(12);
+        padding-bottom: rem(24);
+        line-height: 1;
+    }
+}
+
+footer.lastpage {
+    padding-top: rem(30);
+}
+
+@media screen and (max-width: 760px) {
+    footer .copy {
+        line-height: 1.6;
+        font-size: 12px;
+    }
+
+    footer .pplinks {
+        font-size: 12px;
+    }
+}
